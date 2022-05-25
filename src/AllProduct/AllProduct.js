@@ -14,7 +14,7 @@ const AllProduct = () => {
     return (
 
         <div>
-            <h1 className='text-center text-2xl my-10'>ALL PRODUCTS</h1>
+            <h1 className='text-center text-4xl my-10 text-primary'>ALL PRODUCTS</h1>
             <div className="grid  lg:grid-cols-3 grid-cols-1 justify-center items-center gap-2 my-10">
                 {
                     products.slice(0, 3).map(product => {
@@ -25,8 +25,8 @@ const AllProduct = () => {
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title">{product.name}</h2>
                                 <p>{product.description}</p>
-                                <p>{product.price}</p>
-                                <p>{product.quantity}</p>
+                                <p>price:{product.price}$</p>
+                                <p>Quantity{product.quantity}</p>
 
                                 <div class="card-actions">
                                     <button class="btn btn-primary">Buy Now</button>
