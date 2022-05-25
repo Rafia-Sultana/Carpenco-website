@@ -12,6 +12,7 @@ import Login from './Login/Login';
 import RequireAuth from './Login/RequireAuth';
 import SignUp from './Login/SignUp';
 import AddItem from './AddItem/AddItem'
+import MyPortfolio from './MyPortfolio/MyPortfolio';
 
 
 
@@ -22,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="blog" element={<Blog></Blog>}></Route>
-
+        <Route path="myportfolio" element={<MyPortfolio></MyPortfolio>}></Route>
 
         <Route path="dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<MyServices></MyServices>}></Route>
