@@ -10,8 +10,9 @@ const Review = () => {
         const review = e.target.review.value;
         const name = user.displayName;
         const email = user.email;
+        const rating = e.target.rating.value;
         const data = {
-            review, name, email
+            review, name, email, rating
         }
         fetch('http://localhost:5000/review', {
             method: 'POST',
@@ -38,7 +39,7 @@ const Review = () => {
                                 <input type="text" placeholder='name' disabled value={user?.displayName || ''} class="input input-bordered" name='name' required /><br />
                                 <input type="email" placeholder='email' disabled value={user?.email || ''} class="input input-bordered" name='email' required /><br />
                                 <input type="text" placeholder='write your opinions here...' class="input input-bordered" name='review' required /><br />
-
+                                <input type="number" placeholder='rating' class="input input-bordered" name='rating' required /><br />
 
                                 <input class="btn btn-primary" type="submit" value="Submit" />
                             </form>

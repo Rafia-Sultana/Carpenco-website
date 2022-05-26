@@ -21,6 +21,7 @@ const AllReview = () => {
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title">{review.name}</h2>
                                 <p>{review.review}</p>
+                                <p><small>ratings:</small>{review.rating}</p>
                             </div>
                         </div>
                     })

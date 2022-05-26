@@ -15,6 +15,7 @@ import AddItem from './AddItem/AddItem'
 import MyPortfolio from './MyPortfolio/MyPortfolio';
 import Purchase from './Purchase/Purchase';
 import AllOrder from './Dashboard/AllOrder';
+import Myorder from './Dashboard/myOrder/Myorder';
 
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="review" element={<Review></Review>}></Route>
           <Route path='additem' element={<AddItem></AddItem>}></Route>
           <Route path='allorder' element={<AllOrder></AllOrder>}></Route>
+          <Route path='myorder' element={<Myorder></Myorder>}></Route>
         </Route>
         <Route path="/purchase/:id" element={<Purchase></Purchase>}></Route>
         <Route path="login" element={<Login></Login>}></Route>
