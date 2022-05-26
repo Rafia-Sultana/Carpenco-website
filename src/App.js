@@ -13,6 +13,8 @@ import RequireAuth from './Login/RequireAuth';
 import SignUp from './Login/SignUp';
 import AddItem from './AddItem/AddItem'
 import MyPortfolio from './MyPortfolio/MyPortfolio';
+import Purchase from './Purchase/Purchase';
+import AllOrder from './Dashboard/AllOrder';
 
 
 
@@ -29,8 +31,9 @@ function App() {
           <Route index element={<MyServices></MyServices>}></Route>
           <Route path="review" element={<Review></Review>}></Route>
           <Route path='additem' element={<AddItem></AddItem>}></Route>
-
+          <Route path='allorder' element={<AllOrder></AllOrder>}></Route>
         </Route>
+        <Route path="/purchase/:id" element={<Purchase></Purchase>}></Route>
         <Route path="login" element={<Login></Login>}></Route>
         <Route path="signup" element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<ErrorPage></ErrorPage>}></Route>

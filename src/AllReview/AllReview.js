@@ -7,6 +7,7 @@ const AllReview = () => {
         .then(res => res.json())
         .then(data => setReviews(data))
     console.log(reviews);
+
     return (
         <div>
             <h1 className='text-center text-4xl my-10 text-primary'>ALL Reviews</h1>

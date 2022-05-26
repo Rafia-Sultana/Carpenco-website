@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AllProduct = () => {
     const [products, setProducts] = useState([])
@@ -29,7 +30,7 @@ const AllProduct = () => {
                                 <p>Quantity{product.quantity}</p>
 
                                 <div class="card-actions">
-                                    <button class="btn btn-primary">Buy Now</button>
+                                    <Link to={`/purchase/${product._id}`} class="btn btn-primary">Buy Now</Link>
                                 </div>
                             </div>
                         </div>

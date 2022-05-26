@@ -22,7 +22,7 @@ const Review = () => {
         })
             .then(res => res.json())
             .then(data => alert('successfully data added'))
-
+        e.target.reset();
     }
 
     return (
