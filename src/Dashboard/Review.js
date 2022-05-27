@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Review = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -11,18 +13,23 @@ const Review = () => {
         const name = user.displayName;
         const email = user.email;
         const rating = e.target.rating.value;
-        const data = {
-            review, name, email, rating
+        if (rating > 5 || rating < 1) {
+            toast.error('rating  cant greater than 5 or less than 1');
         }
-        fetch('http://localhost:5000/review', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-            .then(res => res.json())
-            .then(data => alert('successfully data added'))
+        else {
+            const data = {
+                review, name, email, rating
+            }
+            fetch('http://localhost:5000/review', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(res => res.json())
+                .then(data => alert('successfully data added'))
+        }
         e.target.reset();
     }
 
@@ -50,6 +57,7 @@ const Review = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
