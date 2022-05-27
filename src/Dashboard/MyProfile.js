@@ -13,11 +13,12 @@ const MyProfile = () => {
     const [myData, setMydata] = useState([])
 
 
-    const { data, isLoading, refetch } = useQuery('user', () => fetch(`https://mysterious-wildwood-71098.herokuapp.com/userinfo/${email}`, {
+
+    const { data, isLoading, refetch } = useQuery('user', () => fetch(`http://localhost:5000/userinfo/${email}`, {
         method: 'GET',
 
     }).then(res => res.json()))
-
+    console.log(data);
     if (isLoading) {
         return <Loading></Loading>
     }

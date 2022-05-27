@@ -4,6 +4,7 @@ import auth from '../firebase.init'
 import { useForm } from "react-hook-form";
 import Loading from '../Home/Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import UseToken from '../Hooks/UseToken';
 
 const Login = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -14,7 +15,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-
+    const [token] = UseToken(googleUser || user)
     let signInError;
     const navigate = useNavigate();
     const location = useLocation();
