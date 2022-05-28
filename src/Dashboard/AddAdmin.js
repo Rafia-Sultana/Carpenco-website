@@ -9,13 +9,13 @@ const AddAdmin = () => {
     const [user, setUser] = useState([])
     const [admin] = useAdmin(user)
     useEffect(() => {
-        fetch(`http://localhost:5000/alluser`)
+        fetch(`https://peaceful-sea-40105.herokuapp.com/alluser`)
             .then(res => res.json())
             .then(data => setUser(data))
     })
 
     const makeAdmin = (email) => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://peaceful-sea-40105.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

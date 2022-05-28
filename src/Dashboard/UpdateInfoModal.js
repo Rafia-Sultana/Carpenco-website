@@ -15,7 +15,7 @@ const UpdateInfoModal = ({ refetch }) => {
         const address = e.target.address.value;
         const data = { name, phone, address }
 
-        fetch(`http://localhost:5000/updateinfo/${email}`, {
+        fetch(`https://peaceful-sea-40105.herokuapp.com/updateinfo/${email}`, {
             method: 'PUT',
             body: JSON.stringify({ data }),
             headers: {

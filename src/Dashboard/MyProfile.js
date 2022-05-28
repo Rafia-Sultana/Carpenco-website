@@ -14,7 +14,7 @@ const MyProfile = () => {
 
 
 
-    const { data, isLoading, refetch } = useQuery('user', () => fetch(`http://localhost:5000/userinfo/${email}`, {
+    const { data, isLoading, refetch } = useQuery('user', () => fetch(`https://peaceful-sea-40105.herokuapp.com/userinfo/${email}`, {
         method: 'GET',
 
     }).then(res => res.json()))

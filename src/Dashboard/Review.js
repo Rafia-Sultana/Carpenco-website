@@ -20,7 +20,7 @@ const Review = () => {
             const data = {
                 review, name, email, rating
             }
-            fetch('http://localhost:5000/review', {
+            fetch('https://peaceful-sea-40105.herokuapp.com/review', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

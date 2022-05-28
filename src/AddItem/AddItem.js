@@ -17,7 +17,7 @@ const AddItem = () => {
 
         const data = { name, price, img, quantity, description }
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://peaceful-sea-40105.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

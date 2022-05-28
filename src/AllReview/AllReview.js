@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const AllReview = () => {
     const [reviews, setReviews] = useState([])
 
-    fetch('http://localhost:5000/review')
+    fetch('https://peaceful-sea-40105.herokuapp.com/review')
         .then(res => res.json())
         .then(data => setReviews(data))
     console.log(reviews);

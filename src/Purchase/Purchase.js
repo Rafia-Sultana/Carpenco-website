@@ -16,12 +16,12 @@ const Purchase = () => {
     const [productData, setProductData] = useState([])
     const [updateQuantity, setUpdateQuantity] = useState('')
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://peaceful-sea-40105.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => setProductData(data))
     }, [id, updateQuantity])
-
-    const email = user.email
+    console.log(id);
+    const email = user?.email
     const quantity1 = productData.quantity * 1
 
     const orderHandler = (e) => {
@@ -38,7 +38,7 @@ const Purchase = () => {
 
             const quantity = quantity1 - inputQuantity * 1
 
-            fetch('http://localhost:5000/order', {
+            fetch('https://peaceful-sea-40105.herokuapp.com/order', {
                 method: 'POST', // or 'PUT'
                 headers: {
                     'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const Purchase = () => {
 
 
 
-            fetch(`http://localhost:5000/product/${id}`, {
+            fetch(`https://peaceful-sea-40105.herokuapp.com/product/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify({ quantity }),
                 headers: {
@@ -87,7 +87,7 @@ const Purchase = () => {
                     </div>
                     <form action="" onSubmit={orderHandler} className="flex flex-col items-center gap-2">
 
-                        <input type="text" value={user.email} disabled className="input input-bordered w-full max-w-xs" />
+                        <input type="text" value={user?.email} disabled className="input input-bordered w-full max-w-xs" />
                         <input type="text" value={user.displayName} className="input input-bordered w-full max-w-xs" />
                         <input type="text" placeholder="Phone number" name="phone" className="input input-bordered w-full max-w-xs" />
                         <input type="text" placeholder="Address" name="address" className="input input-bordered w-full max-w-xs" />
