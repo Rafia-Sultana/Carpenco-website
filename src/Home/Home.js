@@ -1,6 +1,7 @@
 import React from 'react';
 import AllProduct from '../AllProduct/AllProduct';
 import AllReview from '../AllReview/AllReview';
+import AboutCompany from './Banner/AboutCompany';
 import Banner from './Banner/Banner';
 import SecondSection from './Banner/SecondSection/SecondSection';
 import ServiceMiddleText from './Banner/ServiceMiddleText';
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <SecondSection></SecondSection>
             <ServiceMiddleText></ServiceMiddleText>
+            <AboutCompany></AboutCompany>
             <ServicesReview></ServicesReview>
             <AllProduct></AllProduct>
             <AllReview></AllReview>

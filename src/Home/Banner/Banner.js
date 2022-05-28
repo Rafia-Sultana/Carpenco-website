@@ -1,11 +1,11 @@
 import React from 'react';
 import worker from '../../assets/blue-whitecollar-worker-gesture-formal-wear-outerwear-removebg-preview.png'
-
+import tools from '../../assets/profile-tools-1.jpg'
 const Banner = () => {
     return (
         <div class="hero min-h-screen ">
             <div class="hero-content flex-col lg:flex-row-reverse">
-                <img src={worker} class="max-w-sm rounded-lg " alt='' />
+                <img src={tools} class="max-w-sm rounded-lg " alt='' />
                 <div>
                     <h6 class="font-bold">Best Carpentars Company!</h6>
                     <h1 className='text-5xl text-primary font-bold'>Professional & Quality</h1>
