@@ -19,6 +19,12 @@ const MyPortfolio = () => {
                         <li>Tailwind</li>
                         <li>JavaScript</li>
                         <li>ReactJs</li></p>
+                    <br />
+                    Projects I have done:
+                    Live Link: https://caretutor-abde4.web.app/
+                    Live Link: https://earnest-zabaione-831f1f.netlify.app/
+                    Live Link: https://startling-faun-f50c82.netlify.app/
+
                 </div>
             </div>
         </div>

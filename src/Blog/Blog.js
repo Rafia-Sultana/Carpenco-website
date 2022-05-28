@@ -40,6 +40,12 @@ const Blog = () => {
 
             </div>
             <div class="card-body bg-base-100 border-2 border-indigo-600 shadow-xl">
+                <h2 class="card-title">Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts</h2>
+                <p>
+                    We don't use set directly because the data will change in state..If we set the data directly in route then previous data will  copied in the state.For that we cant change it .Thats why we use ,const [products, setProducts] = useState([]). but not set products = [...]
+                </p>
+            </div>
+            <div class="card-body bg-base-100 border-2 border-indigo-600 shadow-xl">
                 <h2 class="card-title">How does prototypical inheritance work?</h2>
                 <p>
                     prototypical inheritance makes us understand  the ability to access object properties from another object. We use a JavaScript prototype to add new properties and methods to an existing object constructor. By inheriting properties from a prototype, Prototypical inheritance allows us to reuse the properties or methods from one JavaScript object to another through a reference pointer function.

@@ -7,7 +7,7 @@ import { FaKey } from 'react-icons/fa';
 
 const ServicesReview = () => {
     return (
-        <div>
+        <div className='flex flex-wrap'>
             <div className="third-section">
                 <div className="right-part">
                     <AiFillCar size={35}></AiFillCar>

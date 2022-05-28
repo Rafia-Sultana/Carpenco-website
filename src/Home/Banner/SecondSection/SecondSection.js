@@ -7,7 +7,7 @@ import { GiGiftOfKnowledge } from 'react-icons/gi';
 
 const SecondSection = () => {
     return (
-        <div className='flex justify-center gap-4  md:grid-cols-1'>
+        <div className='flex flex-wrap justify-center gap-4 '>
             <div class="card w-48 bg-base-100 shadow-xl">
                 <div class="card-body">
                     <div class="card-actions justify-center">

@@ -14,7 +14,7 @@ const AboutCompany = () => {
                     <div className="flex justify-end">
                         <img src={sign} alt="" />
                         <div className=" mt-10">
-                            <h5>James-Mohan</h5>
+                            <h5 className='text-2xl'>James-Mohan</h5>
                             <p>Chairman and Founder of Carpenco.</p>
                         </div>
                     </div>

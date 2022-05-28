@@ -72,7 +72,7 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-1 shadow bg-base-100 rounded-box w-52">
                             <li><NavLink to="/" >Home</NavLink></li>
-                            <li><NavLink to="/allproducts" >All Products</NavLink></li>
+                            <li><NavLink to="/products">Products</NavLink></li>
                             <li><NavLink to="/blog" >Blogs</NavLink></li>
                             <li><NavLink to="/myportfolio" >Portfolio</NavLink></li>
                             {user &&
@@ -91,7 +91,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         <li><NavLink className='mx-4' to="/" >Home</NavLink></li>
-                        <li><NavLink to="/allproducts" >All Products</NavLink></li>
+                        <li><NavLink to="/products" >Products</NavLink></li>
                         <li><NavLink className='mx-4' to="/blog" >Blogs</NavLink></li>
                         <li><NavLink className='mx-4' to="/myportfolio" >Portfolio</NavLink></li>
                         {/* <li><NavLink className='mx-4' to="/dashboard" >Dashboard</NavLink></li> */}

@@ -18,6 +18,7 @@ import AllOrder from './Dashboard/AllOrder';
 import Myorder from './Dashboard/myOrder/Myorder';
 import MyProfile from './Dashboard/MyProfile';
 import AddAdmin from './Dashboard/AddAdmin';
+import Products from './Products/Products';
 
 
 
@@ -30,7 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="blog" element={<Blog></Blog>}></Route>
         <Route path="myportfolio" element={<MyPortfolio></MyPortfolio>}></Route>
-
+        <Route path="products" element={<Products></Products>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<MyServices></MyServices>}></Route>
           <Route path="review" element={<Review></Review>}></Route>
